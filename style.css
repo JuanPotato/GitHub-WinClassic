@@ -1,11 +1,11 @@
+@-moz-document domain("github.com") {
 /*
  * GitHub Win95 - JuanPotato
  * https://github.com/JuanPotato/GitHub-Win95
  *
- * v0.0.1
+ * v0.0.2
  *
  */
-
 
 /* Header Fade */
 .Header {
@@ -16,8 +16,35 @@
 /* Body Backgrounds */
 .repohead.experiment-repo-nav,
 body,
+.thread-subscription-status,
+.discussion-timeline-actions,
+.new-discussion-timeline .closed-banner,
 .bg-white {
     background: #d4d0c8 !important;
+}
+
+/* Discussion background issues */
+.new-discussion-timeline .closed-banner {
+    border-bottom: 0;
+    display: none;
+}
+
+.discussion-timeline-actions {
+    border-top: 0;
+}
+
+/* Discussion icons Closed, Reopped, stop signs and checkmarks in circles */
+.discussion-item-icon {
+    border-color: #d4d0c8;
+}
+
+/* Rows for issues and PR */
+.Box-row {
+    background: #fff;
+}
+
+.Box-row--focus-gray.navigation-focus {
+    background-color: #f6f8fa;
 }
 
 
@@ -25,7 +52,9 @@ body,
 .btn,
 .btn:hover,
 ul.pagehead-actions > li,
-ul.pagehead-actions > li:hover {
+ul.pagehead-actions > li:hover,
+.subnav-item, /* Labels and Milestone buttons */
+.subnav-item:hover {
     color: #000 !important;
     box-shadow: none !important;
     background: #d4d0c8 !important;
@@ -39,7 +68,8 @@ ul.pagehead-actions > li:hover {
 .btn:active,
 .btn.selected,
 [open]>.btn,
-ul.pagehead-actions > li:active {
+ul.pagehead-actions > li:active,
+.subnav-item:active {
     color: #000 !important;
     box-shadow: none !important;
     background: #d4d0c8 !important;
@@ -55,7 +85,9 @@ ul.pagehead-actions > li:active {
 ul.pagehead-actions li:focus,
 ul.pagehead-actions li:focus-within,
 .branch-select-menu:focus,
-.branch-select-menu:focus-within {
+.branch-select-menu:focus-within,
+.subnav-item:focus,
+.subnav-item:focus-within {
     box-shadow: none !important;
     outline: 1px solid black !important;
 }
@@ -81,6 +113,9 @@ ul.pagehead-actions .social-count:focus {
 	outline: none;
 }
 
+.subnav-item {
+    margin-right: 5px;
+}
 
 /* Danger buttons Aaaaaaaaaaaaaaaaaaaaaaaaah */
 .btn-danger,
@@ -91,6 +126,16 @@ ul.pagehead-actions .social-count:focus {
     color: #f00 !important;
 }
 
+/* Tags */
+.topic-tag, .topic-tag:hover {
+    background: #ebe9e2;
+    color: #000;
+    border-radius: 0;
+    border-top: 2px solid #606060;
+    border-left: 2px solid #606060;
+    border-bottom: 1px solid #fff;
+    border-right: 1px solid #fff;
+}
 
 /* Separate the New file, Upload file, and Find file buttons */
 .BtnGroup-item,
@@ -106,6 +151,12 @@ ul.pagehead-actions .social-count {
     border: none;
     background: none;
 }
+
+ul.pagehead-actions .social-count,
+ul.pagehead-actions .social-count:hover {
+    color: #000;
+}
+
 
 
 /* Getting rid of lines above and below the comments in issues */
@@ -166,4 +217,43 @@ ul.pagehead-actions .social-count {
     border-left: 1px solid #fff;
     border-right: 2px solid #606060;
     padding-top: 2px;
+}
+
+
+/* Editor */
+.file {
+    border: none;
+    border-radius: 0;
+}
+
+.file .file-header {
+    margin-bottom: 10px;
+    border-top: 1px solid #fff;
+    border-left: 1px solid #fff;
+    background: #d4d0c8;
+    border-right: 2px solid #606060;
+    border-bottom: 2px solid #606060;
+}
+
+/* Any white thing */
+.file .data,
+.blankslate {
+    border-radius: 0;
+    background: #fff;
+    border-top: 2px solid #606060;
+    border-left: 2px solid #606060;
+    border-bottom: 1px solid #fff;
+    border-right: 1px solid #fff;
+}
+
+/* Any white thing */
+.subnav-search-input {
+    border-radius: 0;
+    background: #fff;
+    border-top: 2px solid #606060;
+    border-left: 1px solid #606060;
+    border-bottom: 1px solid #fff;
+    border-right: 1px solid #fff;
+}
+
 }
