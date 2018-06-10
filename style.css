@@ -1,0 +1,169 @@
+/*
+ * GitHub Win95 - JuanPotato
+ * https://github.com/JuanPotato/GitHub-Win95
+ *
+ * v0.0.1
+ *
+ */
+
+
+/* Header Fade */
+.Header {
+    background: linear-gradient(to right, #0a246a, #a6caf0);
+}
+
+
+/* Body Backgrounds */
+.repohead.experiment-repo-nav,
+body,
+.bg-white {
+    background: #d4d0c8 !important;
+}
+
+
+/* Basic button styling */
+.btn,
+.btn:hover,
+ul.pagehead-actions > li,
+ul.pagehead-actions > li:hover {
+    color: #000 !important;
+    box-shadow: none !important;
+    background: #d4d0c8 !important;
+    border-radius: 0 !important;
+    border-top: 1px solid #fff !important;
+    border-left: 1px solid #fff !important;
+    border-bottom: 2px solid #606060 !important;
+    border-right: 2px solid #606060 !important;
+}
+
+.btn:active,
+.btn.selected,
+[open]>.btn,
+ul.pagehead-actions > li:active {
+    color: #000 !important;
+    box-shadow: none !important;
+    background: #d4d0c8 !important;
+    border-radius: 0 !important;
+    border-top: 2px solid #606060 !important;
+    border-left: 2px solid #606060 !important;
+    border-bottom: 1px solid #fff !important;
+    border-right: 1px solid #fff !important;
+}
+
+.btn:focus,
+.btn:focus-within,
+ul.pagehead-actions li:focus,
+ul.pagehead-actions li:focus-within,
+.branch-select-menu:focus,
+.branch-select-menu:focus-within {
+    box-shadow: none !important;
+    outline: 1px solid black !important;
+}
+
+
+/* buttons within buttons in the Fork Star Issues buttons */
+ul.pagehead-actions > li .btn,
+ul.pagehead-actions > li .btn:hover,
+ul.pagehead-actions > li .btn:active,
+ul.pagehead-actions > li .btn:focus,
+ul.pagehead-actions > li .btn:focus-within {
+    background: none !important;
+    border-top: none !important;
+    border-left: none !important;
+    border-bottom: none !important;
+    border-right: none !important;
+    outline: none !important;
+}
+
+ul.pagehead-actions .btn:focus,
+ul.pagehead-actions .social-count:focus {
+    box-shadow: none;
+	outline: none;
+}
+
+
+/* Danger buttons Aaaaaaaaaaaaaaaaaaaaaaaaah */
+.btn-danger,
+.btn-danger:hover,
+.btn-danger:active,
+.btn-danger:focus,
+.btn-danger:focus-within {
+    color: #f00 !important;
+}
+
+
+/* Separate the New file, Upload file, and Find file buttons */
+.BtnGroup-item,
+.file-navigation .get-repo-select-menu {
+    margin-left: 5px;
+}
+
+
+/* Watch, Star, and Fork buttons */
+ul.pagehead-actions .btn,
+ul.pagehead-actions .social-count {
+    border-radius: 0;
+    border: none;
+    background: none;
+}
+
+
+/* Getting rid of lines above and below the comments in issues */
+.timeline-comment-wrapper {
+    border-top: none;
+    border-bottom: none;
+}
+
+
+/* Summary and code lang graph */
+.overall-summary {
+    background: #fff;
+    border-radius: 0;
+    border-bottom: 1px solid #fff;
+    border-right: 1px solid #fff;
+    border-top: 2px solid #606060;
+    border-left: 2px solid #606060;
+}
+
+.overall-summary-bottomless {
+    border-bottom: none;
+}
+
+.repository-lang-stats-graph {
+    border-radius: 0;
+    border-bottom: 1px solid #fff;
+    border-right: 1px solid #fff;
+    border-left: 2px solid #606060;
+}
+
+.repository-lang-stats-graph > .language-color {
+    border-radius: 0 !important;
+}
+
+
+/* Project tabs */
+.repohead.experiment-repo-nav {
+    -webkit-box-shadow: inset 0px -1px 0px 0px #fff;
+    -moz-box-shadow: inset 0px -1px 0px 0px #fff;
+    box-shadow: inset 0px -1px 0px 0px #fff;
+    border-bottom: 1px solid #fff;
+}
+
+.reponav-item.selected {
+    padding-bottom: 8px;
+    transform: none;
+    background: #d4d0c8;
+    border-top: 2px solid #fff;
+    border-left: 2px solid #fff;
+    border-right: 2px solid #606060;
+}
+
+.reponav-item {
+    border-radius: 5px 5px 0 0;
+    padding-bottom: 0px;
+    transform: translateY(7px);
+    border-top: 2px solid #fff;
+    border-left: 1px solid #fff;
+    border-right: 2px solid #606060;
+    padding-top: 2px;
+}
