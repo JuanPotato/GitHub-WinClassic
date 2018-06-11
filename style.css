@@ -3,9 +3,19 @@
  * GitHub Win95 - JuanPotato
  * https://github.com/JuanPotato/GitHub-Win95
  *
- * v0.0.2
+ * v0.0.3
  *
  */
+
+
+/* Colors */
+:root {
+    --bg-color: #d4d0c8;
+    --light-bg-color: #ebe9e2;
+    --border-light-color: #fff;
+    --border-dark-color: #606060;
+}
+
 
 /* Header Fade */
 .Header {
@@ -20,7 +30,7 @@ body,
 .discussion-timeline-actions,
 .new-discussion-timeline .closed-banner,
 .bg-white {
-    background: #d4d0c8 !important;
+    background: var(--bg-color) !important;
 }
 
 /* Discussion background issues */
@@ -35,7 +45,7 @@ body,
 
 /* Discussion icons Closed, Reopped, stop signs and checkmarks in circles */
 .discussion-item-icon {
-    border-color: #d4d0c8;
+    border-color: var(--bg-color);
 }
 
 /* Rows for issues and PR */
@@ -48,6 +58,91 @@ body,
 }
 
 
+/* Pinned Repositories */
+.pinned-repo-item,
+/* Contribution Graph */
+.js-contribution-graph > .rounded-1 {
+    background: var(--light-bg-color);
+    border-top: 2px solid var(--border-dark-color) !important;
+    border-left: 2px solid var(--border-dark-color) !important;
+    border-bottom: 1px solid var(--border-light-color) !important;
+    border-right: 1px solid var(--border-light-color) !important;
+}
+
+/* Contribution dots */
+
+
+:root {
+    --contrib-0: #d6d9df;
+    --contrib-1: #93b7df;
+    --contrib-2: #5683b6;
+    --contrib-3: #3851a2;
+    --contrib-4: #0a246a;
+}
+
+
+/* Contribution lvl 0 */
+rect[fill="#ebedf0"] {
+    fill: var(--contrib-0);
+}
+.contrib-footer .legend li:nth-child(1),
+[style~="#ebedf0"] {
+    background-color: var(--contrib-0) !important;
+}
+
+
+/* Contribution lvl 1 */
+rect[fill="#c6e48b"] {
+    fill: var(--contrib-1);
+}
+.contrib-footer .legend li:nth-child(2),
+[style~="#c6e48b"] {
+    background-color: var(--contrib-1) !important;
+}
+stop[stop-color="#c6e48b"] {
+    stop-color: var(--contrib-1);
+}
+
+
+/* Contribution lvl 2 */
+rect[fill="#7bc96f"] {
+    fill: var(--contrib-2);
+}
+.contrib-footer .legend li:nth-child(3),
+[style~="#7bc96f"] {
+    background-color: var(--contrib-2) !important;
+}
+stop[stop-color="#7bc96f"] {
+    stop-color: var(--contrib-2);
+}
+
+/* Contribution lvl 3 */
+rect[fill="#239a3b"] {
+    fill: var(--contrib-3);
+}
+.contrib-footer .legend li:nth-child(4),
+[style~="#239a3b"] {
+    background-color: var(--contrib-3) !important;
+}
+stop[stop-color="#239a3b"] {
+    stop-color: var(--contrib-3);
+}
+
+
+/* Contribution lvl 4 */
+rect[fill="#196127"] {
+    fill: var(--contrib-4);
+}
+.contrib-footer .legend li:nth-child(5),
+[style~="#196127"] {
+    background-color: var(--contrib-4) !important;
+}
+stop[stop-color="#196127"] {
+    stop-color: var(--contrib-4);
+}
+
+
+
 /* Basic button styling */
 .btn,
 .btn:hover,
@@ -57,12 +152,12 @@ ul.pagehead-actions > li:hover,
 .subnav-item:hover {
     color: #000 !important;
     box-shadow: none !important;
-    background: #d4d0c8 !important;
+    background: var(--bg-color) !important;
     border-radius: 0 !important;
-    border-top: 1px solid #fff !important;
-    border-left: 1px solid #fff !important;
-    border-bottom: 2px solid #606060 !important;
-    border-right: 2px solid #606060 !important;
+    border-top: 1px solid var(--border-light-color) !important;
+    border-left: 1px solid var(--border-light-color) !important;
+    border-bottom: 2px solid var(--border-dark-color) !important;
+    border-right: 2px solid var(--border-dark-color) !important;
 }
 
 .btn:active,
@@ -72,12 +167,12 @@ ul.pagehead-actions > li:active,
 .subnav-item:active {
     color: #000 !important;
     box-shadow: none !important;
-    background: #d4d0c8 !important;
+    background: var(--bg-color) !important;
     border-radius: 0 !important;
-    border-top: 2px solid #606060 !important;
-    border-left: 2px solid #606060 !important;
-    border-bottom: 1px solid #fff !important;
-    border-right: 1px solid #fff !important;
+    border-top: 2px solid var(--border-dark-color) !important;
+    border-left: 2px solid var(--border-dark-color) !important;
+    border-bottom: 1px solid var(--border-light-color) !important;
+    border-right: 1px solid var(--border-light-color) !important;
 }
 
 .btn:focus,
@@ -128,13 +223,13 @@ ul.pagehead-actions .social-count:focus {
 
 /* Tags */
 .topic-tag, .topic-tag:hover {
-    background: #ebe9e2;
+    background: var(--light-bg-color);
     color: #000;
     border-radius: 0;
-    border-top: 2px solid #606060;
-    border-left: 2px solid #606060;
-    border-bottom: 1px solid #fff;
-    border-right: 1px solid #fff;
+    border-top: 2px solid var(--border-dark-color);
+    border-left: 2px solid var(--border-dark-color);
+    border-bottom: 1px solid var(--border-light-color);
+    border-right: 1px solid var(--border-light-color);
 }
 
 /* Separate the New file, Upload file, and Find file buttons */
@@ -170,10 +265,10 @@ ul.pagehead-actions .social-count:hover {
 .overall-summary {
     background: #fff;
     border-radius: 0;
-    border-bottom: 1px solid #fff;
-    border-right: 1px solid #fff;
-    border-top: 2px solid #606060;
-    border-left: 2px solid #606060;
+    border-bottom: 1px solid var(--border-light-color);
+    border-right: 1px solid var(--border-light-color);
+    border-top: 2px solid var(--border-dark-color);
+    border-left: 2px solid var(--border-dark-color);
 }
 
 .overall-summary-bottomless {
@@ -182,9 +277,9 @@ ul.pagehead-actions .social-count:hover {
 
 .repository-lang-stats-graph {
     border-radius: 0;
-    border-bottom: 1px solid #fff;
-    border-right: 1px solid #fff;
-    border-left: 2px solid #606060;
+    border-bottom: 1px solid var(--border-light-color);
+    border-right: 1px solid var(--border-light-color);
+    border-left: 2px solid var(--border-dark-color);
 }
 
 .repository-lang-stats-graph > .language-color {
@@ -203,19 +298,19 @@ ul.pagehead-actions .social-count:hover {
 .reponav-item.selected {
     padding-bottom: 8px;
     transform: none;
-    background: #d4d0c8;
-    border-top: 2px solid #fff;
-    border-left: 2px solid #fff;
-    border-right: 2px solid #606060;
+    background: var(--bg-color);
+    border-top: 2px solid var(--border-light-color);
+    border-left: 2px solid var(--border-light-color);
+    border-right: 2px solid var(--border-dark-color);
 }
 
 .reponav-item {
     border-radius: 5px 5px 0 0;
     padding-bottom: 0px;
     transform: translateY(7px);
-    border-top: 2px solid #fff;
-    border-left: 1px solid #fff;
-    border-right: 2px solid #606060;
+    border-top: 2px solid var(--border-light-color);
+    border-left: 1px solid var(--border-light-color);
+    border-right: 2px solid var(--border-dark-color);
     padding-top: 2px;
 }
 
@@ -228,11 +323,11 @@ ul.pagehead-actions .social-count:hover {
 
 .file .file-header {
     margin-bottom: 10px;
-    border-top: 1px solid #fff;
-    border-left: 1px solid #fff;
-    background: #d4d0c8;
-    border-right: 2px solid #606060;
-    border-bottom: 2px solid #606060;
+    background: var(--bg-color);
+    border-top: 1px solid var(--border-light-color);
+    border-left: 1px solid var(--border-light-color);
+    border-right: 2px solid var(--border-dark-color);
+    border-bottom: 2px solid var(--border-dark-color);
 }
 
 /* Any white thing */
@@ -240,20 +335,42 @@ ul.pagehead-actions .social-count:hover {
 .blankslate {
     border-radius: 0;
     background: #fff;
-    border-top: 2px solid #606060;
-    border-left: 2px solid #606060;
-    border-bottom: 1px solid #fff;
-    border-right: 1px solid #fff;
+    border-top: 2px solid var(--border-dark-color);
+    border-left: 2px solid var(--border-dark-color);
+    border-bottom: 1px solid var(--border-light-color);
+    border-right: 1px solid var(--border-light-color);
 }
 
 /* Any white thing */
 .subnav-search-input {
     border-radius: 0;
     background: #fff;
-    border-top: 2px solid #606060;
-    border-left: 1px solid #606060;
-    border-bottom: 1px solid #fff;
-    border-right: 1px solid #fff;
+    border-top: 2px solid var(--border-dark-color);
+    border-left: 1px solid var(--border-dark-color);
+    border-bottom: 1px solid var(--border-light-color);
+    border-right: 1px solid var(--border-light-color);
 }
 
+
+/* Forks page branch images */
+[src="https://assets-cdn.github.com/images/modules/network/l.png"] {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAaAQMAAACNTe4+AAAABlBMVEUAAADU0Mg7YKu+AAAACXBIWXMAAC4jAAAuIwF4pT92AAAAGUlEQVQI12P4//8Dw//9QEwKvWoBhCYeAwDmxkoIjN48CQAAAABJRU5ErkJggg==) no-repeat;
+  width: 20px;
+  height: 26px;
+  padding-left: 20px;
+}
+
+[src="https://assets-cdn.github.com/images/modules/network/i.png"] {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAaAQMAAACNTe4+AAAABlBMVEUAAADU0Mg7YKu+AAAACXBIWXMAAC4jAAAuIwF4pT92AAAAE0lEQVQI12P4//8Dw//9QExbGgDZMEjtdCvpXAAAAABJRU5ErkJggg==) no-repeat;
+  width: 20px;
+  height: 26px;
+  padding-left: 20px;
+}
+
+[src="https://assets-cdn.github.com/images/modules/network/t.png"] {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAaAQMAAACNTe4+AAAABlBMVEUAAADU0Mg7YKu+AAAACXBIWXMAAC4jAAAuIwF4pT92AAAAGElEQVQI12P4//8Dw//9QEwKvWoBA4n6AMXGSIiJ9sj9AAAAAElFTkSuQmCC) no-repeat;
+  width: 20px;
+  height: 26px;
+  padding-left: 20px;
+}
 }
