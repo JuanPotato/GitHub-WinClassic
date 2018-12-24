@@ -3,7 +3,7 @@
  * GitHub Win95 - JuanPotato
  * https://github.com/JuanPotato/GitHub-Win95
  *
- * v0.0.4
+ * v0.0.5
  *
  */
 
@@ -22,6 +22,26 @@
     background: linear-gradient(to right, #0a246a, #a6caf0);
 }
 
+/* Not logged in header padding */
+.HeaderMenu--logged-out .header-search-input,
+.header-logged-out .py-3 {
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+}
+
+.Header {
+    padding-bottom: 12px !important;
+    padding-top: 12px !important;
+}
+
+/* Issue Title Background */
+.gh-header {
+    background-color: var(--bg-color)
+}
+
+.gh-header-number {
+    color: #666;
+}
 
 /* Body Backgrounds */
 .repohead.experiment-repo-nav,
@@ -57,11 +77,44 @@ body,
     background-color: #f6f8fa;
 }
 
+/* Lines */
+.border-left {
+    border-left: 1px solid var(--border-dark-color) !important;
+}
+
+.profile-rollup-wrapper+.profile-rollup-wrapper {
+    border-top: 1px solid var(--border-dark-color) !important; 
+}
+
+.profile-timeline.discussion-timeline:before,
+.profile-timeline.discussion-timeline .profile-timeline-month-heading:after {
+    background-color: var(--border-dark-color) !important;
+}
+
+/* Timeline Cards */
+.profile-timeline-card-wrapper {
+    border-top: none !important;
+    border-left: none !important;
+    border-bottom: none !important;
+    border-right: none !important;
+}
+
+.profile-timeline-card {
+    border-radius: 0 !important;
+    background: var(--light-bg-color) !important;
+    border-top: 2px solid var(--border-dark-color) !important;
+    border-left: 2px solid var(--border-dark-color) !important;
+    border-bottom: 1px solid var(--border-light-color) !important;
+    border-right: 1px solid var(--border-light-color) !important;
+}
 
 /* Pinned Repositories */
 .pinned-repo-item,
 /* Contribution Graph */
-.js-contribution-graph > .rounded-1 {
+.js-contribution-graph > .rounded-1,
+.graph-before-activity-overview,
+.activity-overview-box {
+    border-radius: 0 !important;
     background: var(--light-bg-color);
     border-top: 2px solid var(--border-dark-color) !important;
     border-left: 2px solid var(--border-dark-color) !important;
@@ -69,9 +122,11 @@ body,
     border-right: 1px solid var(--border-light-color) !important;
 }
 
+.graph-before-activity-overview {
+    margin-bottom: 10px;
+}
+
 /* Contribution dots */
-
-
 :root {
     --contrib-0: #d6d9df;
     --contrib-1: #93b7df;
@@ -436,10 +491,7 @@ div.push          > .body > div > div > div > div > div.Box {
 .octicon-tag {
     height: 16px;
     width: 16px;
-	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAGFBMVEUAAAAAAAAA/wAA//+AgIDAwMD//wD///+dqoxLAAAAAXRSTlMAQObYZgAAAGBJREFUeNpNyAEKwCAMQ9HFpnr/G+/XMFgQ7H/Pf9J3eQaw5N7dbQuarg3MKNGrKiA5sAIKuBsBjgQOIGXx0wFER4EncCzXlcDhrY0ACM2AogfoCwgwEkDoiC9IyZC+fAF2uwLWCa+OCgAAAABJRU5ErkJggg==);
-   	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAADFBMVEUAAAAAAACAgAD//wC3A1pDAAAAAXRSTlMAQObYZgAAADNJREFUeNqtysENACAQAkHA/ns2niRrAfLbCVJmYllnecEIjxEAARD/llhIG2kjbaTNbm/LGAFViRD0rwAAAABJRU5ErkJggg==);
 	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAD1BMVEUAAAAAAACAgAD//wD///9UfihKAAAAAXRSTlMAQObYZgAAADhJREFUeNqtykEOADAIAkFE///mNjYE47l42okAe/CYdY8DKiz+GMJawlwSv4UBiVuitqgtau31AeKCAXu3eM4/AAAAAElFTkSuQmCC);
- 
 }
 
 .octicon-history {
@@ -463,7 +515,7 @@ div.push          > .body > div > div > div > div > div.Box {
 .octicon-comment {
     height: 16px;
     width: 16px;
-	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAElBMVEUAAAAAAAAAAP+AgIDAwMD///8yGp+qAAAAAXRSTlMAQObYZgAAAEZJREFUeNpdjskNADAIw8q1/8otARoJ/2K5xwEGDsD0ePgoi49w02SuRR6TCkgJHUrswlngjv3K/gcQ6ZmbyjGpOifTkxYXmN8CiiYGGMIAAAAASUVORK5CYII=);
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAElBMVEUAAAAAAAAAAP+AgIDAwMD///8yGp+qAAAAAXRSTlMAQObYZgAAAEZJREFUeNpdjskNADAIw8q1/8otARoJ/2K5xwEGDsD0ePgoi49w02SuRR6TCkgJHUrswlngjv3K/gcQ6ZmbyjGpOifTkxYXmN8CiiYGGMIAAAAASUVORK5CYII=);
 }
 
 .octicon-light-bulb {
@@ -476,6 +528,5 @@ div.push          > .body > div > div > div > div > div.Box {
     height: 16px;
     width: 16px;
     background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAElBMVEUAAAAAAACAAICAgIDAwMD///9Vny5fAAAAAXRSTlMAQObYZgAAAEVJREFUeAFdyMENRDEIA1EGkv5bXmv1YwQ++U18S2IsK2Fag2mntso2y8XygUhon1SoUmorXCXs0LlKtso/2U72S/ZLzz+3eQFrVJzvdQAAAABJRU5ErkJggg==);
-
 }
 }
