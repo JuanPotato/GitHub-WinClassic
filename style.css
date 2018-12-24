@@ -1,9 +1,8 @@
-@-moz-document domain("github.com") {
 /*
  * GitHub Win95 - JuanPotato
  * https://github.com/JuanPotato/GitHub-Win95
  *
- * v0.0.3
+ * v0.0.4
  *
  */
 
@@ -149,7 +148,9 @@ stop[stop-color="#196127"] {
 ul.pagehead-actions > li,
 ul.pagehead-actions > li:hover,
 .subnav-item, /* Labels and Milestone buttons */
-.subnav-item:hover {
+.subnav-item:hover,
+.ajax-pagination-btn,
+.ajax-pagination-btn:hover {
     color: #000 !important;
     box-shadow: none !important;
     background: var(--bg-color) !important;
@@ -164,7 +165,8 @@ ul.pagehead-actions > li:hover,
 .btn.selected,
 [open]>.btn,
 ul.pagehead-actions > li:active,
-.subnav-item:active {
+.subnav-item:active,
+.ajax-pagination-btn:active {
     color: #000 !important;
     box-shadow: none !important;
     background: var(--bg-color) !important;
@@ -182,7 +184,9 @@ ul.pagehead-actions li:focus-within,
 .branch-select-menu:focus,
 .branch-select-menu:focus-within,
 .subnav-item:focus,
-.subnav-item:focus-within {
+.subnav-item:focus-within,
+.ajax-pagination-btn:focus,
+.ajax-pagination-btn:focus-within {
     box-shadow: none !important;
     outline: 1px solid black !important;
 }
@@ -333,15 +337,29 @@ ul.pagehead-actions .social-count:hover {
 /* Any white thing */
 .file .data,
 .blankslate {
-    border-radius: 0;
-    background: #fff;
-    border-top: 2px solid var(--border-dark-color);
-    border-left: 2px solid var(--border-dark-color);
-    border-bottom: 1px solid var(--border-light-color);
-    border-right: 1px solid var(--border-light-color);
+    border-radius: 0 !important;
+    background: #fff !important;
+    border-top: 2px solid var(--border-dark-color) !important;
+    border-left: 2px solid var(--border-dark-color) !important;
+    border-bottom: 1px solid var(--border-light-color) !important;
+    border-right: 1px solid var(--border-light-color) !important;
 }
 
-/* Any white thing */
+div.watch_started > .body > div > div > div.Box,
+div.public        > .body > div > div > div:nth-child(2),
+div.follow        > .body > div > div > div.Box,
+div.fork          > .body > div > div > div:nth-child(2),
+div.repo          > .body > div > div > div.Box,
+div.push          > .body > div > div > div > div.Box,
+div.push          > .body > div > div > div > div > div.Box {
+    border-radius: 0 !important;
+    background: var(--light-bg-color) !important;
+    border-top: 2px solid var(--border-dark-color) !important;
+    border-left: 2px solid var(--border-dark-color) !important;
+    border-bottom: 1px solid var(--border-light-color) !important;
+    border-right: 1px solid var(--border-light-color) !important;
+}
+
 .subnav-search-input {
     border-radius: 0;
     background: #fff;
@@ -373,4 +391,89 @@ ul.pagehead-actions .social-count:hover {
   height: 26px;
   padding-left: 20px;
 }
+
+
+/* Octicooooons */
+.octicon-git-branch > *,
+.octicon-mark-github > *,
+.octicon-law > *,
+.octicon-organization > *,
+.octicon-tag > * ,
+.octicon-history > *,
+.octicon-file > *,
+.octicon-file-directory > *,
+.octicon-comment > *,
+.octicon-light-bulb > *,
+.octicon-repo > * {
+    display: none;
+}
+
+.octicon-mark-github {
+    height: 32px;
+    width: 32px;
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAJ1BMVEUAAAAAAAAAgAAAgIAA/wAA//+AAICAgACAgIDAwMD/AP///wD///+QoRNeAAAAAXRSTlMAQObYZgAAAQpJREFUeNp9kFuOxCAMBNcY48Zw//NuOxlFCjDjKD+paj/y96X8+FVDVSOSTz9gNYsIM1XxOXyPk1u+FRDfBMaRPLvUDhnD1zwxMIFao0JlFSrMpk1MqzS6LkOUH28OowFoe7cI8k5OJ0qBKQV/dUC1uLiVKCi9cYa8dqxmkdwKjZNghryDQvDRVQhC2GVknrytwh1PsZTSgJfA0hIEaVBQCgvnGWkAFt3I2yYIeglwCHFTbSt3F6BDe9fE5G/B50gDRE1ZK6cxxhBJmvGd06Dichdx8qOSlfhcFxPiHyX+E7v8HsBjrzWOU0jnBx7b+Ji84i7i/Ucwn+RpsQny5L+tccWeFsc1P2DF/39bDBwigyDTAAAAAElFTkSuQmCC);
+}
+
+.octicon-git-branch {
+    width: 16px;
+    height: 16px;
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAG1BMVEUAAAAAAAAAgAAA/wCAAACAgADAwMD//wD///+e2a8gAAAAAXRSTlMAQObYZgAAAFNJREFUeAGViVEOQyEMw9KUt3H/E89VI+37uSCwq8FBil5/7XZvQpozBfAbGecqn6hLjjPVRRBPljMEFayND89RLUjKc+pz1rcQ4oHw9wS9CwUpP+6wAWn9QCGuAAAAAElFTkSuQmCC);
+}
+
+.octicon-organization {
+    width: 16px;
+    height: 16px;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAElBMVEUAAAAAAAAAAIAAAP/AwMD///8aFmToAAAAAXRSTlMAQObYZgAAAFFJREFUeAF9jsENRCEQQgfR/lteAhv09PHCIzBx/kL0+kb4CvZG+RzhbuGEl4PwUuBKWHon5d54g7mN+1MRcsHKoItM0gEhJqkI1JOfoWVv/QDwJQH7J3ZEdAAAAABJRU5ErkJggg==);
+}
+
+.octicon-law {
+    height: 16px;
+    width: 16px;
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAFVBMVEUAAAAAAACAgIDAwMD/AAD//wD///+RfIYyAAAAAXRSTlMAQObYZgAAADpJREFUeNq1jUEKADAIw6rO/v/JKxSGl7HTAoKEoAByEBDZJD1loTWEVN2K1b5wL1K8C/bnL3WwiAk2oSgC9IrIqfkAAAAASUVORK5CYII=);
+}
+
+.octicon-tag {
+    height: 16px;
+    width: 16px;
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAGFBMVEUAAAAAAAAA/wAA//+AgIDAwMD//wD///+dqoxLAAAAAXRSTlMAQObYZgAAAGBJREFUeNpNyAEKwCAMQ9HFpnr/G+/XMFgQ7H/Pf9J3eQaw5N7dbQuarg3MKNGrKiA5sAIKuBsBjgQOIGXx0wFER4EncCzXlcDhrY0ACM2AogfoCwgwEkDoiC9IyZC+fAF2uwLWCa+OCgAAAABJRU5ErkJggg==);
+   	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAADFBMVEUAAAAAAACAgAD//wC3A1pDAAAAAXRSTlMAQObYZgAAADNJREFUeNqtysENACAQAkHA/ns2niRrAfLbCVJmYllnecEIjxEAARD/llhIG2kjbaTNbm/LGAFViRD0rwAAAABJRU5ErkJggg==);
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAD1BMVEUAAAAAAACAgAD//wD///9UfihKAAAAAXRSTlMAQObYZgAAADhJREFUeNqtykEOADAIAkFE///mNjYE47l42okAe/CYdY8DKiz+GMJawlwSv4UBiVuitqgtau31AeKCAXu3eM4/AAAAAElFTkSuQmCC);
+ 
+}
+
+.octicon-history {
+    height: 16px;
+    width: 16px;
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAG1BMVEUAAAAAAAAAgAIRDxCAAACAgIDAwMD+AgD//v+XZQckAAAAAXRSTlMAQObYZgAAAFVJREFUeNp1zTkSwCAMQ1EJvHD/E0eEAG7yCoo/GgOvCMDHFSQVcnlD8C5uyO130T71hkldWIq1s7DU42klDL0nRMzgCqHQAVJB0iiY9g0c6xcUJlge760E2ISi0WYAAAAASUVORK5CYII=);
+}
+
+.octicon-file {
+    height: 16px;
+    width: 16px;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAD1BMVEUAAAAAAACAgIDAwMD///98eLaRAAAAAXRSTlMAQObYZgAAADRJREFUeNrFyrENADAMAkHA3n/mWCLIVepcQfECgIIwtamYoDHbLvsgE6KeQfb7UXED14QDHrICEpKB7VcAAAAASUVORK5CYII=);
+}
+
+.octicon-file-directory {
+    height: 16px;
+    width: 16px;
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAElBMVEUAAAAAAACAgIDAwMD//wD///8xatt6AAAAAXRSTlMAQObYZgAAADVJREFUeAFjwAKYQACZz8wChEzIfIgITCETKxJgYgQJAOVhECKA4DPTTgUyAAkwMKIABsIAACN8AgbGFinIAAAAAElFTkSuQmCC);
+}
+
+.octicon-comment {
+    height: 16px;
+    width: 16px;
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAElBMVEUAAAAAAAAAAP+AgIDAwMD///8yGp+qAAAAAXRSTlMAQObYZgAAAEZJREFUeNpdjskNADAIw8q1/8otARoJ/2K5xwEGDsD0ePgoi49w02SuRR6TCkgJHUrswlngjv3K/gcQ6ZmbyjGpOifTkxYXmN8CiiYGGMIAAAAASUVORK5CYII=);
+}
+
+.octicon-light-bulb {
+    height: 16px;
+    width: 12px;
+   	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAMAAAAVv241AAAAElBMVEUAAAAAAACAgIDAwMD//wD///8xatt6AAAAAXRSTlMAQObYZgAAADlJREFUeAF1y8ENwEAIA8Ez2P23nJCs7odfO0Kcmd4dpthGSoxopHhFyq77NJjm9B0QvQJ10xvQ3w+XEwE6ugFjbAAAAABJRU5ErkJggg==);
+}
+
+.octicon-repo {
+    height: 16px;
+    width: 16px;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAElBMVEUAAAAAAACAAICAgIDAwMD///9Vny5fAAAAAXRSTlMAQObYZgAAAEVJREFUeAFdyMENRDEIA1EGkv5bXmv1YwQ++U18S2IsK2Fag2mntso2y8XygUhon1SoUmorXCXs0LlKtso/2U72S/ZLzz+3eQFrVJzvdQAAAABJRU5ErkJggg==);
+
 }
