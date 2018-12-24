@@ -1,3 +1,4 @@
+@-moz-document domain("github.com") {
 /*
  * GitHub Win95 - JuanPotato
  * https://github.com/JuanPotato/GitHub-Win95
@@ -476,4 +477,5 @@ div.push          > .body > div > div > div > div > div.Box {
     width: 16px;
     background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAElBMVEUAAAAAAACAAICAgIDAwMD///9Vny5fAAAAAXRSTlMAQObYZgAAAEVJREFUeAFdyMENRDEIA1EGkv5bXmv1YwQ++U18S2IsK2Fag2mntso2y8XygUhon1SoUmorXCXs0LlKtso/2U72S/ZLzz+3eQFrVJzvdQAAAABJRU5ErkJggg==);
 
+}
 }
